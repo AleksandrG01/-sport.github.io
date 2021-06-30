@@ -1,0 +1,217 @@
+<style>
+
+   a.menu__link.-white:before {
+       content: none;
+   }
+
+   .icon-menu.-white span {
+       background: rgb(255, 255, 255);
+   }
+   .icon-menu.-white.active span {
+       background: #000;
+   }
+
+   .menu__buttons {
+       display: none;
+   }
+
+   .menu__icon.icon-menu.-white.-main-page-black span {
+   background: #000;
+   }
+
+   .menu__link.-white {
+    color: #fff;
+   }
+   @media (max-width: 552px){
+      .menu__link.-white {
+          color: #1a1a1a;
+      }
+   }
+   .header.--internal-page {
+      border-bottom: 2px solid transparent;
+   }
+
+</style>
+
+
+
+<section id="intro" class="intro section">
+   <div class="intro-container container" >
+      <div class="intro-text">LET's</div>
+      <div class="intro-text -go">go</div>
+      <div class="intro-sotial">
+           <a href="#" class=""><svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#insta" aria-hidden="true"></use></svg></a>
+           <a href="#" class=""><svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#faсebook" aria-hidden="true"></use></svg></a>
+      </div>
+   </div>
+</section>
+
+
+<section class="section">
+   <div class="section-supermodel  container" >
+      <h2 class="section-title -center">supermodel? it’s you</h2>
+   </div>
+   <div class="supermodel-img -inverted-text-left " >
+      <div class="container -supermodel-before">
+         <img src="../images/Layer_53.png" alt="">
+      </div>
+   </div>
+
+   <div class="supermodel-button container" >
+         <a href="/catalogue.html" class="button -black-bordered">Go shopping</a>
+         <img src="../images/Layer_54.png" alt="">
+   </div>
+</section>
+
+
+<section class="section">
+   <div class="section-supermodel container" >
+      <h2 class="section-title">TOP</h2>
+      <div class="row -no-wrap">
+         <div class="col-md-4">
+               <div x-data="{open: false}" class="image-button-centered " @mouseover="open = true"   @mouseout="open = false" style="background-image: url(../images/Layer_55.png);">
+                  <a href="#"  x-show.transition="open" class="button -black-bordered -black -absolut">Watch</a>
+               </div>   
+         </div>
+         <div class="col-md-4">
+            <div x-data="{open: false}" class="image-button-centered " @mouseover="open = true"   @mouseout="open = false" style="background-image: url(../images/Layer_56.png);">
+               <a href="#"  x-show.transition="open" class="button -black-bordered -black -absolut">Watch</a>
+            </div>   
+         </div>
+         <div class="col-md-4">
+            <div x-data="{open: false}" class="image-button-centered " @mouseover="open = true"   @mouseout="open = false" style="background-image: url(../images/Layer_57.png);">
+               <a href="#"  x-show.transition="open" class="button -black-bordered -black -absolut">Watch</a>
+            </div>   
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="section">
+   <div class="section-subscribers container" >
+      <h2 class="section-title">HUNDREDS OF SUBSCRIBERS</h2>
+      <a href="#"  class="button -black-bordered -black -black-hover">Join Me :)</a>
+   </div>
+</section>
+
+
+<section class="section -goods">
+   <div class="section-goods container" >
+      <div class="section-goods-row">
+            <div class="image-goods-container ">
+               <img src="../images/Layer_58.png" alt="">
+               <div class="section-goods-text" >
+                  <p class="section-goods-title">Pink hoodie</p>
+                  <p  class="section-goods-price"><span>$</span>200,00</p>
+               </div>
+            </div>   
+            <div class="image-goods-container ">
+               <img src="../images/Layer_59.png" alt="">
+               <div class="section-goods-text" >
+                  <p class="section-goods-title">Pink hoodie</p>
+                  <p  class="section-goods-price"><span>$</span>200,00</p>
+               </div>
+            </div>
+            <div class="image-goods-container ">
+               <img src="../images/Layer_60.png" alt="">
+               <div class="section-goods-text" >
+                  <p class="section-goods-title">Pink hoodie</p>
+                  <p  class="section-goods-price"><span>$</span>200,00</p>
+               </div>
+            </div>
+      </div>
+   </div>
+</section>
+
+
+<section class="section">
+   <div class="-inverted-text-right -about" >
+      <div class="section-about container" >
+      
+         <div class="row -center">
+            <div class="col-md-6">
+               <img  class="section-about-img" src="../images/Layer_61.png" alt="">
+            </div>
+            <div class="col-md-6">
+               <div class="section-about-text" >
+               <h2 class="section-title">Ульяна <br> Сазановская</h2>
+               <p>Ульяна давно сотрудничает с множеством брендов - и теперь открыла магазин с самым большим ассортиментом красивой фитнес одежды в стране: около 1500 моделей шести топ марок , от российской Bona Fide до американской Bombshell.</p>
+               <div class="section-about-sotial">
+                  <a href="#" class=""><svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#insta" aria-hidden="true"></use></svg></a>
+                  <a href="#" class=""><svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#faсebook" aria-hidden="true"></use></svg></a>
+                </div>
+               </div>
+            </div>
+   
+         </div>
+      </div>
+      </div>
+   </div>
+
+</section>
+
+
+
+<section class="section">
+      <div class="section-categoties" >
+         <h2 class="section-title -center">Categories</h2>
+         <div class="swiper-container categoties-slider">
+            <div class="swiper-wrapper categoties-slider-wrapper">
+               <div class="categoties-slider-slide swiper-slide">
+                  <img  class="" src="../images/Layer_62.png" alt="">
+                  <a href="#">Комбинезоны</a>
+               </div>
+
+               <div class="categoties-slider-slide swiper-slide">
+                  <img  class="" src="../images/Layer_64.png" alt="">
+                  <a href="#">Комплекты</a>
+               </div>
+
+               <div class="categoties-slider-slide swiper-slide">
+                  <img  class="" src="../images/Layer_65.png" alt="">
+                  <a href="#">Лосины и шорты</a>
+               </div>
+
+               <div class="categoties-slider-slide swiper-slide">
+                  <img  class="" src="../images/Layer_67.png" alt="">
+                  <a href="#">Топы и майки</a>
+               </div>
+
+               <div class="categoties-slider-slide swiper-slide">
+                  <img  class="" src="../images/Layer_68.png" alt="">
+                  <a href="#">Купальники</a>
+               </div>
+
+               <div class="categoties-slider-slide swiper-slide">
+                  <img  class="" src="../images/Layer_69.png" alt="">
+                  <a href="#">Аксессуары</a>
+               </div>
+
+               <div class="categoties-slider-slide swiper-slide">
+                  <img  class="" src="../images/Layer_65.png" alt="">
+                  <a href="#">Комбинезоны</a>
+               </div>
+
+               <div class="categoties-slider-slide swiper-slide">
+                  <img  class="" src="../images/Layer_62.png" alt="">
+                  <a href="#">Комбинезоны</a>
+               </div>
+               
+            </div>
+            <div class="swiper-button-next categoties-slider-button-n"></div>
+            <div class="swiper-button-prev categoties-slider-button-p"></div>
+         </div>
+
+      </div>
+   </div>
+</section>
+
+
+<section class="section bunner-big">
+   <div class="section-bunner-big container" style="background-image: url(../images/4-layers.png);" >
+      <div class="bunner-big-text -top" >ОПЛАТА ТОЛЬКО</div>
+      <div class="bunner-big-text -bottom">ПОСЛЕ <span>ПРИМЕРКИ</span> </div>
+      <a href="#"  x-show.transition="open" class="button -black-bordered -black -bottom-center">Go shopping</a>
+   </div>
+</section>

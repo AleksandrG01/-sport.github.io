@@ -1,0 +1,66 @@
+
+<header class="header --internal-page" >
+    <div class="header__container container" >
+        <div class="header__menu menu">
+
+            <div class="menu__category">
+                <ul class="menu__category-list">
+                    <li data-da="menu__mobile,0,552" ><a href="#" class=" menu__link -white active">Одежда</a></li>
+                    <li data-da="menu__mobile,1,552" ><a href="#" class=" menu__link -white">Тренировки</a></li>
+                </ul>
+            </div>
+
+            <nav class="menu__body">
+                <ul class="menu__list">
+                        <div class="menu__mobile"></div>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Тренировки</a></li>
+                        <li><a href="#" class="menu__link -burger">Тренировки</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Тренировки</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                </ul>
+            </nav>
+
+            <div x-data="{ open: false }"  class="menu__buttons">
+                <div class="menu__buttons-phone"><a href="#" class="-phone">
+                    <span><svg class="svg-icon1" >
+                     <use xlink:href="/i/symbol/svg/sprite.symbol.svg#phone" aria-hidden="true"></use>
+                    </svg></span>8 800 555 27 60</a></div>
+                <ul class="menu__buttons-list">
+                    <li ><a href="#" class=" menu__buttons-link">
+                        <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#lope" aria-hidden="true"></use></svg>
+                    </a></li>
+                    <li ><a href="#" class=" menu__buttons-link">
+                        <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#heart" aria-hidden="true"></use></svg>
+                    </a></li>
+                    <li ><a  @click.prevent="open = !open"  href="#" class=" menu__buttons-link">
+                        <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#card" aria-hidden="true"></use></svg>
+                        <span>2</span>
+                    </a></li>
+                </ul>
+                <div  x-show="open"  x-transition:enter-start="opacity-0 transform scale-90" @click.away="open = false" class="menu__buttons-informer">
+                    <div class="menu__buttons-informer-container">
+                        <p>Вы уверены, что хотите удалить этот товар из корзины?</p>
+                    </div>
+                    <div class="menu__buttons-informer-buttons">
+                        <a class="-dimiss" href="#">Отмена</a>
+                        <a class="-accept" href="#">Ок</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__box">
+                <div class="menu__icon icon-menu -white">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

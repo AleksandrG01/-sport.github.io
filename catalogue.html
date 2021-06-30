@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="wrapper">
+
+    
+<header class="header --internal-page" >
+    <div class="header__container container" >
+        <div class="header__menu menu">
+
+            <div class="menu__category">
+                <ul class="menu__category-list">
+                    <li data-da="menu__mobile,0,552" ><a href="#" class=" menu__link -white active">Одежда</a></li>
+                    <li data-da="menu__mobile,1,552" ><a href="#" class=" menu__link -white">Тренировки</a></li>
+                </ul>
+            </div>
+
+            <nav class="menu__body">
+                <ul class="menu__list">
+                        <div class="menu__mobile"></div>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Тренировки</a></li>
+                        <li><a href="#" class="menu__link -burger">Тренировки</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Тренировки</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                </ul>
+            </nav>
+
+            <div x-data="{ open: false }"  class="menu__buttons">
+                <div class="menu__buttons-phone"><a href="#" class="-phone">
+                    <span><svg class="svg-icon1" >
+                     <use xlink:href="/i/symbol/svg/sprite.symbol.svg#phone" aria-hidden="true"></use>
+                    </svg></span>8 800 555 27 60</a></div>
+                <ul class="menu__buttons-list">
+                    <li ><a href="#" class=" menu__buttons-link">
+                        <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#lope" aria-hidden="true"></use></svg>
+                    </a></li>
+                    <li ><a href="#" class=" menu__buttons-link">
+                        <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#heart" aria-hidden="true"></use></svg>
+                    </a></li>
+                    <li ><a  @click.prevent="open = !open"  href="#" class=" menu__buttons-link">
+                        <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#card" aria-hidden="true"></use></svg>
+                        <span>2</span>
+                    </a></li>
+                </ul>
+                <div  x-show="open"  x-transition:enter-start="opacity-0 transform scale-90" @click.away="open = false" class="menu__buttons-informer">
+                    <div class="menu__buttons-informer-container">
+                        <p>Вы уверены, что хотите удалить этот товар из корзины?</p>
+                    </div>
+                    <div class="menu__buttons-informer-buttons">
+                        <a class="-dimiss" href="#">Отмена</a>
+                        <a class="-accept" href="#">Ок</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__box">
+                <div class="menu__icon icon-menu -white">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    
+    <main class="main">
+        <div class="container" >
+   <ul class="breadcrumb">
+      <li><a href="/">Главная</a></li>
+      <li><a href="">Одежда</a></li>
+      <li><a href="" class="current">Каталог</a></li>
+     </ul>
+</div>
+
+
+
+<section class="section bunner-catalog">
+   <div class="container" >
+
+      <div class="swiper-container catalogue-slider">
+         <div class="swiper-wrapper catalogue-slider-wrapper">
+
+            <div class="catalogue-slider-slide swiper-slide">
+               <div class="bunner-catalog-content" style="background-image: url(../images/topi_catalog.png);">
+                  <div class="bunner-catalog-text-container">
+                     <div class="bunner-catalog-black-small-text">
+                        встречаем                  
+                     </div>
+                     <div class="bunner-catalog-white-big-text">
+                        лето
+                     </div>
+                     <div class="bunner-catalog-subtitle-text">
+                        со стильными топами
+                     </div>
+                     <a href="#" class="bunner-catalog-button">
+                        Посмотреть
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="catalogue-slider-slide swiper-slide">
+               <div class="bunner-catalog-content" style="background-image: url(../images/3-layers.png);">
+                  <div class="bunner-catalog-text-container">
+                     <div class="bunner-catalog-white-big-text">
+                        море
+                     </div>
+                     <div class="bunner-catalog-black-small-text">
+                        будь готова                
+                     </div>
+                     <div class="bunner-catalog-subtitle-text">
+                        купальники топ брендов
+                     </div>
+                     <a href="#" class="bunner-catalog-button">
+                        Посмотреть
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            
+         </div>
+         <div class="swiper-button-next catalogue-slider-button-n"></div>
+         <div class="swiper-button-prev catalogue-slider-button-p"></div>
+      </div>
+
+   </div>
+</section>
+
+
+<div x-data="{ sidebar: false }" class="content-with-sidebar container">
+
+   <div @click.prevent="sidebar = !sidebar" class="mobile-filter-icon">
+      <svg :class="{ 'filter-f-open' : sidebar , 'filter-f-hidden' : !sidebar}" class="" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#filter-solid" aria-hidden="true"></use></svg>
+      <svg :class="{ 'filter-c-open' : sidebar , 'filter-c-hidden' : !sidebar}" class="" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#times-solid" aria-hidden="true"></use></svg>
+      
+   </div>
+
+   <div  :class="{ 'block' : sidebar , 'hidden' : !sidebar}"  @click.away="sidebar = false"  x-show.transition="sidebar"  class="sidebar">
+      <div class="sidebar-all-goods-text">
+         Все товары <span>(1072)</span>
+      </div>   
+
+      
+      <div class="filter-container">
+         <div class="filter-title">
+            Цвет
+         </div> 
+         <ul class="filter-color-list">
+            <li class="-black"></li>
+            <li class="-blue"></li>
+            <li class="-dorado"></li>
+            <li class="-gray active"></li>
+            <li class="-green"></li>
+            <li class="-radical-red"></li>
+            <li class="-violet"></li>
+            <li class="-persian-red"></li>
+            <li class="-yellow"></li>
+            <li class="-white"></li>
+         </ul>
+      </div>
+
+
+      <div class="filter-container">
+         <div class="filter-title">
+            Размер
+         </div> 
+         <ul class="filter-size-list">
+            <li>XS</li>
+            <li>S</li>
+            <li>M</li>
+            <li>L</li>
+            <li>XL</li>
+            <li>XXL</li>
+         </ul>
+      </div>
+
+      <div class="filter-container" x-data="{ open: true }">
+         <div   @click.prevent="open = !open" class="filter-title -border-bottom -arrow">
+            Бренд
+            <span :class="{ 'block' : open , 'hidden' : !open}"   ><svg class="" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#arrow_down" aria-hidden="true"></use></svg></span>
+         </div> 
+         <ul  x-show.transition="open"  class="filter-b-list">
+            <li> <a href="#">Bombshell</a></li>
+            <li> <a href="#"> Elite Body</a></li>
+            <li> <a href="#">Mansen</a></li>
+            <li> <a href="#">ToryFit sets</a></li>
+            <li> <a href="#">Bona Fide</a></li>
+            <li> <a href="#">Euphoria</a></li>
+            <li> <a href="#">ProFit</a></li>
+         </ul>
+      </div>
+
+
+      <div class="filter-container" x-data="{ open: true }">
+         <div   @click.prevent="open = !open"  class="filter-title -border-bottom -arrow">
+            Тип одежды
+            <span  :class="{ 'block' : open , 'hidden' : !open}" ><svg class="" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#arrow_down" aria-hidden="true"></use></svg></span>
+         </div> 
+         <ul  x-show.transition="open"  class="filter-b-list">
+            <li> <a href="#">Боди</a></li>
+            <li> <a href="#">Комбинезон</a></li>
+            <li> <a href="#">Леггинсы</a></li>
+            <li> <a href="#">Майка</a></li>
+            <li> <a href="#">Рашгард</a></li>
+            <li> <a href="#">Топ</a></li>
+            <li> <a href="#">Топ с длинным рукавом</a></li>
+            <li> <a href="#">Футболка</a></li>
+            <li> <a href="#">Шорты</a></li>
+            <li> <a href="#">Штаны</a></li>
+         </ul>
+      </div>
+
+   </div>
+   
+   <div class="product-catalogue">
+      <div class="product-catalogue-row">
+
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="/product.html">
+                  <img src="../images/Layer_91.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <a href="#"  class="product-catalogue-category">Комбинезон</a>
+            <a href="/product.html" class="product-catalogue-title">My Galrista Ceramic</a>
+            <div class="product-catalogue-price">8 950 руб.</div>
+         </div>
+      
+         
+         <div class="product-catalogue-item">
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="/product.html">
+                  <img src="../images/Layer_90.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+            <a href="#"  class="product-catalogue-category">Комплект</a>
+            <a href="#" class="product-catalogue-title">Disney Set</a>
+            <div class="product-catalogue-price">8 100 руб.</div>
+         </div>
+      
+      
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_92.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <a href="#"  class="product-catalogue-category">Лосины и шорты</a>
+            <a href="#"  class="product-catalogue-title">Chill Grey Melange</a>
+            <div class="product-catalogue-price">2 500 руб.</div>
+         </div>
+         
+        
+         
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_93.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <a href="#" class="product-catalogue-category">Топ</a>
+            <a href="#"  class="product-catalogue-title">Touch and Go Candy</a>
+            <div class="product-catalogue-price">2 740 руб.</div>
+         </div>
+
+         
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_94.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <div class="product-catalogue-category">Купальник</div>
+            <div class="product-catalogue-title">Zebra</div>
+            <div class="product-catalogue-price">2 900 руб.</div>
+         </div>
+         
+         
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_95.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <div class="product-catalogue-category">Топ с длинным рукавом</div>
+            <div class="product-catalogue-title">Rashguard Mini Kinezis Black</div>
+            <div class="product-catalogue-price">2 350 руб.</div>
+         </div>
+
+         
+
+         <div class="product-catalogue-item">
+
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_91.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+            
+            <div class="product-catalogue-category">Комбинезон</div>
+            <div class="product-catalogue-title">My Galrista Ceramic</div>
+            <div class="product-catalogue-price">8 950 руб.</div>
+         </div>
+
+         
+         <div class="product-catalogue-item">
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_90.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <div class="product-catalogue-category">Комплект</div>
+            <div class="product-catalogue-title">Disney Set</div>
+            <div class="product-catalogue-price">8 100 руб.</div>
+         </div>
+
+
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_92.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <div class="product-catalogue-category">Лосины и шорты</div>
+            <div class="product-catalogue-title">Chill Grey Melange</div>
+            <div class="product-catalogue-price">2 500 руб.</div>
+         </div>
+         
+        
+         
+         <div class="product-catalogue-item">
+
+               <div class="product-catalogue-image-container">
+                  <a class="product-catalogue-image" href="">
+                     <img src="../images/Layer_93.png" alt="">
+                  </a>
+                  <div class="like">
+                     <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                     <span>72</span>
+                  </div>
+               </div>
+
+            <div class="product-catalogue-category">Топ</div>
+            <div class="product-catalogue-title">Touch and Go Candy</div>
+            <div class="product-catalogue-price">2 740 руб.</div>
+         </div>
+         
+         
+         
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_94.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <div class="product-catalogue-category">Купальник</div>
+            <div class="product-catalogue-title">Zebra</div>
+            <div class="product-catalogue-price">2 900 руб.</div>
+         </div>
+         
+         
+         <div class="product-catalogue-item">
+
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_95.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+
+            <div class="product-catalogue-category">Топ с длинным рукавом</div>
+            <div class="product-catalogue-title">Rashguard Mini Kinezis Black</div>
+            <div class="product-catalogue-price">2 350 руб.</div>
+         </div>
+
+
+
+      </div>
+      
+   </div>
+</div>
+
+
+<section class="section">
+   <div class=" container " >
+      <div class="container -button-centered">
+         <a href="#"  class="button -black-bordered -black -black-hover -show-more">Показать еще 30 товаров<img src="../images/button_arrow_down.png" alt=""> </a>
+      </div>
+   </div>
+</section>
+
+<div class="_centered">
+   <ul class="pagination">
+      <li><a href="#" class="prev"><svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#paginate_prev" aria-hidden="true"></use></svg></a></li>
+      <li><a href="#">1</a></li>
+      <li><a  class="active" href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a class="disabled" href="#">...</a></li>
+      <li><a href="#">204</a></li>
+      <li><a href="#" class="next"><svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#paginate_next" aria-hidden="true"></use></svg></a></li>
+   </ul>
+</div>
+
+
+<section class="section bunner-big -internal">
+   <div class="section-bunner-big container" style="background-image: url(../images/4-layers.png);" >
+      <div class="bunner-big-text -top" >ОПЛАТА ТОЛЬКО</div>
+      <div class="bunner-big-text -bottom">ПОСЛЕ <span>ПРИМЕРКИ</span> </div>
+      <a href="#"  class="button -black-bordered -black -bottom-center">Go shopping</a>
+   </div>
+</section>
+
+
+
+
+
+    </main>
+    
+    <footer class="footer">
+   <div class="footer__block">
+   <div class="footer__container container">
+      <div class="footer__item">
+         <div class="footer__item-container">
+            <div class="footer__item-title">Адрес:</div>  
+            <p>125252, г.Москва, ул.Планетная, д.11</p>
+            <p>ИНН/КПП 7714390373 / 771401001</p>
+            <p>ОГРН 1167746508489</p>
+         </div>        
+      </div>
+
+      <div class="footer__item">
+         <div class="footer__item-container">
+            <div class="footer__item-title">Контакты:</div>   
+            <p>Тел: 1234567989</p>
+         </div>        
+      </div>
+
+      <div class="footer__item">
+         <div class="footer__item-container">
+            <div class="footer__item-title"></div>   
+            <a href="#">Условия использования сайта <br> Политика конфеденциальности</a>
+         </div>        
+      </div>
+   </div>
+</div>
+   <div class="footer__copiright container">
+      <div class="footer__copiright-text">
+            <p>Copyright © Sazanovskaya  2021. Все права защищены</p>
+      </div>
+      <div class="footer__item">
+          <div class="footer__copiright-sotial">
+               <ul>
+                  <li ><a href="#" class=" menu__buttons-link">
+                     <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#insta" aria-hidden="true"></use></svg>
+                 </a></li>
+                 <li ><a href="#" class=" menu__buttons-link">
+                  <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#faсebook" aria-hidden="true"></use></svg>
+              </a></li>
+               </ul>   
+         </div>        
+      </div>
+   </div>
+</footer>
+
+</div>
+
+<!--<div  id="show-grid" class="mfp-hide">-->
+   <div  id="show-grid" class="mfp-hide">
+   <div class="dimension-grid-container">
+
+      <div class="dimension-grid-container-image">
+         <img src="../images/girl_101.png" alt="">
+      </div>
+     
+      <div class="dimension-grid-container-table-container">
+         <div class="dimension-grid-container-table-title">
+            Выберите размер
+         </div>
+
+         <div class="dimension-grid-container-table">
+
+         <div class="dimension-grid-slider-left-title">
+            <ul>
+               <li class="dimension-grid-slider-title" >Размер</li>
+               <li>Рост</li>
+               <li>Бедра</li>
+               <li>Грудь</li>
+            </ul>
+         </div>
+
+         <div class="dimension-grid-slider-cnt">
+
+            <div class="swiper-container dimension-grid-slider-block">
+               <div class="swiper-wrapper dimension-grid-slider-wrapper">
+
+                  <div class="swiper-slide dimension-grid-slider-slide">                  
+                     <ul>
+                        <li class="dimension-grid-slider-title">XS</li>
+                        <li>157 - 176 см</li>
+                        <li>86 - 96 см</li>
+                        <li>87 - 95 см</li>
+                     </ul>
+                  </div>
+                  <div class="swiper-slide dimension-grid-slider-slide">                  
+                     <ul>
+                        <li class="dimension-grid-slider-title">S</li>
+                        <li>157 - 176 см</li>
+                        <li>86 - 96 см</li>
+                        <li>87 - 95 см</li>
+                     </ul>
+                  </div>
+                  <div class="swiper-slide dimension-grid-slider-slide">                  
+                     <ul>
+                        <li class="dimension-grid-slider-title">M</li>
+                        <li>157 - 176 см</li>
+                        <li>86 - 96 см</li>
+                        <li>87 - 95 см</li>
+                     </ul>
+                  </div>
+                  <div class="swiper-slide dimension-grid-slider-slide">                  
+                     <ul>
+                        <li class="dimension-grid-slider-title">XXS</li>
+                        <li>157 - 176 см</li>
+                        <li>86 - 96 см</li>
+                        <li>87 - 95 см</li>
+                     </ul>
+                  </div>
+                  
+               </div>
+            </div>
+      </div>
+
+
+   </div>
+
+   <div class="swiper-container dimension-grid-slider-pag">
+      <div class="swiper-wrapper dimension-grid-slider-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+      </div>
+      <div class="dimension-grid-slider-pagination"></div>
+   </div>
+
+      </div>
+     
+
+   </div>
+
+</div>
+    
+
+    <script src="javascript/script.min.js"></script>
+
+</body>
+</html>

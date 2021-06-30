@@ -1,0 +1,250 @@
+<div class="container" >
+   <ul class="breadcrumb">
+      <li><a href="/">Главная</a></li>
+      <li><a href="">Одежда</a></li>
+      <li><a class="current" href="/catalogue.html">Корзина</a></li>
+     </ul>
+</div>
+
+
+<section class="section">
+   <div class="container" >
+      <h2 class="section-title -cart">корзина</h2>
+   </div>
+</section>
+
+
+<section class="section cart-item-properties">
+
+   <div class="purchase-row-container container" >
+
+      <div class="purchase-row-items">
+         <div class="purchase-row-item">
+            <div class="purchase-row-image">
+               <a href="#"><img  alt="" src="../images/cart_img.png"></a>
+            </div>
+            <div class="details-block">
+               <div class="purchase-row-title">
+                  <a href="">My Galaxy La Florista Ceramic</a>
+               </div>
+               <div class="details-number-input">
+                  <button class="details-number-input-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                  <input type="number" min="0" value="1" readonly>
+                  <button class="details-number-input-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+               </div>
+               <div class="purchase-row-price">8 950 руб.</div>
+               <div class="purchase-row-delete">   <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#x" aria-hidden="true"></use></svg></div>
+               <div class="purchase-row-desc">
+                  <p>Комбинезон</p>
+                  <p>Размер: М</p>
+                  <p>Бренд: Bona Fide</p>
+               </div>
+            </div>
+         </div>
+   
+   
+         <div class="purchase-row-item">
+            <div class="purchase-row-image">
+               <a href="#"><img  alt="" src="../images/Layer_99s.png"></a>
+            </div>
+            <div class="details-block">
+               <div class="purchase-row-title">
+                  <a href="">Chill Grey Melange</a>
+               </div>
+               <div class="details-number-input">
+                  <button class="details-number-input-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                  <input type="number" min="0" value="1" readonly>
+                  <button class="details-number-input-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+               </div>
+               <div class="purchase-row-price">2500 руб.</div>
+               <div class="purchase-row-delete">   <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#x" aria-hidden="true"></use></svg></div>
+               <div class="purchase-row-desc">
+                  <p>Лосины и шорты</p>
+                  <p>Размер: S</p>
+                  <p>Бренд: ToryFit sets</p>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+      <div class="purchase-row-banner" style="background-image: url(../images/cart-bunner.png);" >
+         <div class="purchase-row-banner-block">
+            <p><span>актуально. </span> купальники.</p>
+            <a href="#"  class="button-cart-bunner">Посмотреть</a>
+         </div>
+      </div>
+
+      <div class="purchase-row-total">
+         <p>Итого к оплате: <span>11 450 руб.</span> </p>
+      </div>
+
+
+   </div>
+</section>
+
+
+<section class="section">
+   <div class=" container -button-centered" >
+      <a href="#"  class="button -black-bordered -margin-lr ">Продолжить покупки</a>
+      <a href="#"  class="button -black-bordered -black -black-hover -margin-lr ">Оформить заказ</a>
+   </div>
+</section>
+
+
+
+<section class="section shipping-Information">
+   <div class="container" >
+      <div class="shipping-Information-form-container">
+         <form 
+         class="shipping-Information-form"
+         data-request="onSendingRequestInCompany"
+         data-request-validate>  
+         
+               <div class="shipping-Information-form-header">Информация о доставке</div>
+              <input name="formType" type="hidden" value="Отправить запрос данной компании" />     
+        
+                 <div class="form-group">
+                    <input
+                       name="name"
+                       type="text"
+                       placeholder="ФИО" />     
+                    <span data-validate-for="name"></span>
+                 </div>
+      
+                 <div class="form-group">
+                  <input
+                     name="phone"
+                     type="text"
+                     placeholder="Телефон" />     
+                  <span data-validate-for="phone"></span>
+               </div>
+      
+               <div class="form-group">
+                  <input
+                     name="city"
+                     type="text"
+                     placeholder="Город" />     
+                  <span data-validate-for="city"></span>
+               </div>
+      
+               <div class="form-group">
+                  <input
+                     name="adres"
+                     type="text"
+                     placeholder="Адрес" />     
+                  <span data-validate-for="adres"></span>
+               </div>
+      
+        
+                 <div class="error-msg" ></div>  
+                 <div class="_centered"><button type="submit" class="shipping-Information-button">Подтвердить</button></div>
+                
+           </form>
+           </div>
+      
+   </div>
+</section>
+
+
+
+
+
+
+<section class="section related-products">
+   <div class="container">
+      <h2 class="section-title -center">Вас может заинтересовать</h2>
+      <div class="product-catalogue-row -r-products">
+
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="/product.html">
+                  <img src="../images/Layer_91.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <a href="#"  class="product-catalogue-category">Комбинезон</a>
+            <a href="/product.html" class="product-catalogue-title">My Galrista Ceramic</a>
+            <div class="product-catalogue-price">8 950 руб.</div>
+         </div>
+      
+         
+         <div class="product-catalogue-item">
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="/product.html">
+                  <img src="../images/Layer_90.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+            <a href="#"  class="product-catalogue-category">Комплект</a>
+            <a href="#" class="product-catalogue-title">Disney Set</a>
+            <div class="product-catalogue-price">8 100 руб.</div>
+         </div>
+      
+      
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_92.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <a href="#"  class="product-catalogue-category">Лосины и шорты</a>
+            <a href="#"  class="product-catalogue-title">Chill Grey Melange</a>
+            <div class="product-catalogue-price">2 500 руб.</div>
+         </div>
+         
+        
+         
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_93.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <a href="#" class="product-catalogue-category">Топ</a>
+            <a href="#"  class="product-catalogue-title">Touch and Go Candy</a>
+            <div class="product-catalogue-price">2 740 руб.</div>
+         </div>
+
+
+
+      </div>
+   </div>
+</section>
+
+<section class="section">
+   <div class=" container -button-centered" >
+      <a href="#"  class="button -black-bordered -black -black-hover -catalogue">Каталог</a>
+   </div>
+</section>
+
+
+
+<section class="section bunner-big -internal">
+   <div class="section-bunner-big container" style="background-image: url(../images/4-layers.png);" >
+      <div class="bunner-big-text -top" >ОПЛАТА ТОЛЬКО</div>
+      <div class="bunner-big-text -bottom">ПОСЛЕ <span>ПРИМЕРКИ</span> </div>
+   </div>
+</section>
+
+

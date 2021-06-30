@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Document</title>
+</head>
+<body >
+
+
+<div class="wrapper">
+
+    
+<header class="header --internal-page" >
+    <div class="header__container container" >
+        <div class="header__menu menu">
+
+            <div class="menu__category">
+                <ul class="menu__category-list">
+                    <li data-da="menu__mobile,0,552" ><a href="#" class=" menu__link -white active">Одежда</a></li>
+                    <li data-da="menu__mobile,1,552" ><a href="#" class=" menu__link -white">Тренировки</a></li>
+                </ul>
+            </div>
+
+            <nav class="menu__body">
+                <ul class="menu__list">
+                        <div class="menu__mobile"></div>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Тренировки</a></li>
+                        <li><a href="#" class="menu__link -burger">Тренировки</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                        <li><a href="#" class="menu__link -burger">Тренировки</a></li>
+                        <li><a href="#" class="menu__link -burger">Ссылка</a></li>
+                </ul>
+            </nav>
+
+            <div x-data="{ open: false }"  class="menu__buttons">
+                <div class="menu__buttons-phone"><a href="#" class="-phone">
+                    <span><svg class="svg-icon1" >
+                     <use xlink:href="/i/symbol/svg/sprite.symbol.svg#phone" aria-hidden="true"></use>
+                    </svg></span>8 800 555 27 60</a></div>
+                <ul class="menu__buttons-list">
+                    <li ><a href="#" class=" menu__buttons-link">
+                        <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#lope" aria-hidden="true"></use></svg>
+                    </a></li>
+                    <li ><a href="#" class=" menu__buttons-link">
+                        <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#heart" aria-hidden="true"></use></svg>
+                    </a></li>
+                    <li ><a  @click.prevent="open = !open"  href="#" class=" menu__buttons-link">
+                        <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#card" aria-hidden="true"></use></svg>
+                        <span>2</span>
+                    </a></li>
+                </ul>
+                <div  x-show="open"  x-transition:enter-start="opacity-0 transform scale-90" @click.away="open = false" class="menu__buttons-informer">
+                    <div class="menu__buttons-informer-container">
+                        <p>Вы уверены, что хотите удалить этот товар из корзины?</p>
+                    </div>
+                    <div class="menu__buttons-informer-buttons">
+                        <a class="-dimiss" href="#">Отмена</a>
+                        <a class="-accept" href="#">Ок</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__box">
+                <div class="menu__icon icon-menu -white">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    
+    <main class="main">
+        <div class="container" >
+   <ul class="breadcrumb">
+      <li><a href="/">Главная</a></li>
+      <li><a href="">Одежда</a></li>
+      <li><a class="current" href="/catalogue.html">Корзина</a></li>
+     </ul>
+</div>
+
+
+<section class="section">
+   <div class="container" >
+      <h2 class="section-title -cart">корзина</h2>
+   </div>
+</section>
+
+
+<section class="section cart-item-properties">
+
+   <div class="purchase-row-container container" >
+
+      <div class="purchase-row-items">
+         <div class="purchase-row-item">
+            <div class="purchase-row-image">
+               <a href="#"><img  alt="" src="../images/cart_img.png"></a>
+            </div>
+            <div class="details-block">
+               <div class="purchase-row-title">
+                  <a href="">My Galaxy La Florista Ceramic</a>
+               </div>
+               <div class="details-number-input">
+                  <button class="details-number-input-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                  <input type="number" min="0" value="1" readonly>
+                  <button class="details-number-input-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+               </div>
+               <div class="purchase-row-price">8 950 руб.</div>
+               <div class="purchase-row-delete">   <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#x" aria-hidden="true"></use></svg></div>
+               <div class="purchase-row-desc">
+                  <p>Комбинезон</p>
+                  <p>Размер: М</p>
+                  <p>Бренд: Bona Fide</p>
+               </div>
+            </div>
+         </div>
+   
+   
+         <div class="purchase-row-item">
+            <div class="purchase-row-image">
+               <a href="#"><img  alt="" src="../images/Layer_99s.png"></a>
+            </div>
+            <div class="details-block">
+               <div class="purchase-row-title">
+                  <a href="">Chill Grey Melange</a>
+               </div>
+               <div class="details-number-input">
+                  <button class="details-number-input-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                  <input type="number" min="0" value="1" readonly>
+                  <button class="details-number-input-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+               </div>
+               <div class="purchase-row-price">2500 руб.</div>
+               <div class="purchase-row-delete">   <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#x" aria-hidden="true"></use></svg></div>
+               <div class="purchase-row-desc">
+                  <p>Лосины и шорты</p>
+                  <p>Размер: S</p>
+                  <p>Бренд: ToryFit sets</p>
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+      <div class="purchase-row-banner" style="background-image: url(../images/cart-bunner.png);" >
+         <div class="purchase-row-banner-block">
+            <p><span>актуально. </span> купальники.</p>
+            <a href="#"  class="button-cart-bunner">Посмотреть</a>
+         </div>
+      </div>
+
+      <div class="purchase-row-total">
+         <p>Итого к оплате: <span>11 450 руб.</span> </p>
+      </div>
+
+
+   </div>
+</section>
+
+
+<section class="section">
+   <div class=" container -button-centered" >
+      <a href="#"  class="button -black-bordered -margin-lr ">Продолжить покупки</a>
+      <a href="#"  class="button -black-bordered -black -black-hover -margin-lr ">Оформить заказ</a>
+   </div>
+</section>
+
+
+
+<section class="section shipping-Information">
+   <div class="container" >
+      <div class="shipping-Information-form-container">
+         <form 
+         class="shipping-Information-form"
+         data-request="onSendingRequestInCompany"
+         data-request-validate>  
+         
+               <div class="shipping-Information-form-header">Информация о доставке</div>
+              <input name="formType" type="hidden" value="Отправить запрос данной компании" />     
+        
+                 <div class="form-group">
+                    <input
+                       name="name"
+                       type="text"
+                       placeholder="ФИО" />     
+                    <span data-validate-for="name"></span>
+                 </div>
+      
+                 <div class="form-group">
+                  <input
+                     name="phone"
+                     type="text"
+                     placeholder="Телефон" />     
+                  <span data-validate-for="phone"></span>
+               </div>
+      
+               <div class="form-group">
+                  <input
+                     name="city"
+                     type="text"
+                     placeholder="Город" />     
+                  <span data-validate-for="city"></span>
+               </div>
+      
+               <div class="form-group">
+                  <input
+                     name="adres"
+                     type="text"
+                     placeholder="Адрес" />     
+                  <span data-validate-for="adres"></span>
+               </div>
+      
+        
+                 <div class="error-msg" ></div>  
+                 <div class="_centered"><button type="submit" class="shipping-Information-button">Подтвердить</button></div>
+                
+           </form>
+           </div>
+      
+   </div>
+</section>
+
+
+
+
+
+
+<section class="section related-products">
+   <div class="container">
+      <h2 class="section-title -center">Вас может заинтересовать</h2>
+      <div class="product-catalogue-row -r-products">
+
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="/product.html">
+                  <img src="../images/Layer_91.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <a href="#"  class="product-catalogue-category">Комбинезон</a>
+            <a href="/product.html" class="product-catalogue-title">My Galrista Ceramic</a>
+            <div class="product-catalogue-price">8 950 руб.</div>
+         </div>
+      
+         
+         <div class="product-catalogue-item">
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="/product.html">
+                  <img src="../images/Layer_90.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+            <a href="#"  class="product-catalogue-category">Комплект</a>
+            <a href="#" class="product-catalogue-title">Disney Set</a>
+            <div class="product-catalogue-price">8 100 руб.</div>
+         </div>
+      
+      
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_92.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <a href="#"  class="product-catalogue-category">Лосины и шорты</a>
+            <a href="#"  class="product-catalogue-title">Chill Grey Melange</a>
+            <div class="product-catalogue-price">2 500 руб.</div>
+         </div>
+         
+        
+         
+         <div class="product-catalogue-item">
+
+            <div class="product-catalogue-image-container">
+               <a class="product-catalogue-image" href="">
+                  <img src="../images/Layer_93.png" alt="">
+               </a>
+               <div class="like">
+                  <svg ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#like" aria-hidden="true"></use></svg>
+                  <span>72</span>
+               </div>
+            </div>
+
+            <a href="#" class="product-catalogue-category">Топ</a>
+            <a href="#"  class="product-catalogue-title">Touch and Go Candy</a>
+            <div class="product-catalogue-price">2 740 руб.</div>
+         </div>
+
+
+
+      </div>
+   </div>
+</section>
+
+<section class="section">
+   <div class=" container -button-centered" >
+      <a href="#"  class="button -black-bordered -black -black-hover -catalogue">Каталог</a>
+   </div>
+</section>
+
+
+
+<section class="section bunner-big -internal">
+   <div class="section-bunner-big container" style="background-image: url(../images/4-layers.png);" >
+      <div class="bunner-big-text -top" >ОПЛАТА ТОЛЬКО</div>
+      <div class="bunner-big-text -bottom">ПОСЛЕ <span>ПРИМЕРКИ</span> </div>
+   </div>
+</section>
+
+
+
+    </main>
+    
+    <footer class="footer">
+   <div class="footer__block">
+   <div class="footer__container container">
+      <div class="footer__item">
+         <div class="footer__item-container">
+            <div class="footer__item-title">Адрес:</div>  
+            <p>125252, г.Москва, ул.Планетная, д.11</p>
+            <p>ИНН/КПП 7714390373 / 771401001</p>
+            <p>ОГРН 1167746508489</p>
+         </div>        
+      </div>
+
+      <div class="footer__item">
+         <div class="footer__item-container">
+            <div class="footer__item-title">Контакты:</div>   
+            <p>Тел: 1234567989</p>
+         </div>        
+      </div>
+
+      <div class="footer__item">
+         <div class="footer__item-container">
+            <div class="footer__item-title"></div>   
+            <a href="#">Условия использования сайта <br> Политика конфеденциальности</a>
+         </div>        
+      </div>
+   </div>
+</div>
+   <div class="footer__copiright container">
+      <div class="footer__copiright-text">
+            <p>Copyright © Sazanovskaya  2021. Все права защищены</p>
+      </div>
+      <div class="footer__item">
+          <div class="footer__copiright-sotial">
+               <ul>
+                  <li ><a href="#" class=" menu__buttons-link">
+                     <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#insta" aria-hidden="true"></use></svg>
+                 </a></li>
+                 <li ><a href="#" class=" menu__buttons-link">
+                  <svg class="svg-icon1" ><use xlink:href="/i/symbol/svg/sprite.symbol.svg#faсebook" aria-hidden="true"></use></svg>
+              </a></li>
+               </ul>   
+         </div>        
+      </div>
+   </div>
+</footer>
+
+</div>
+
+<!--<div  id="show-grid" class="mfp-hide">-->
+   <div  id="show-grid" class="mfp-hide">
+   <div class="dimension-grid-container">
+
+      <div class="dimension-grid-container-image">
+         <img src="../images/girl_101.png" alt="">
+      </div>
+     
+      <div class="dimension-grid-container-table-container">
+         <div class="dimension-grid-container-table-title">
+            Выберите размер
+         </div>
+
+         <div class="dimension-grid-container-table">
+
+         <div class="dimension-grid-slider-left-title">
+            <ul>
+               <li class="dimension-grid-slider-title" >Размер</li>
+               <li>Рост</li>
+               <li>Бедра</li>
+               <li>Грудь</li>
+            </ul>
+         </div>
+
+         <div class="dimension-grid-slider-cnt">
+
+            <div class="swiper-container dimension-grid-slider-block">
+               <div class="swiper-wrapper dimension-grid-slider-wrapper">
+
+                  <div class="swiper-slide dimension-grid-slider-slide">                  
+                     <ul>
+                        <li class="dimension-grid-slider-title">XS</li>
+                        <li>157 - 176 см</li>
+                        <li>86 - 96 см</li>
+                        <li>87 - 95 см</li>
+                     </ul>
+                  </div>
+                  <div class="swiper-slide dimension-grid-slider-slide">                  
+                     <ul>
+                        <li class="dimension-grid-slider-title">S</li>
+                        <li>157 - 176 см</li>
+                        <li>86 - 96 см</li>
+                        <li>87 - 95 см</li>
+                     </ul>
+                  </div>
+                  <div class="swiper-slide dimension-grid-slider-slide">                  
+                     <ul>
+                        <li class="dimension-grid-slider-title">M</li>
+                        <li>157 - 176 см</li>
+                        <li>86 - 96 см</li>
+                        <li>87 - 95 см</li>
+                     </ul>
+                  </div>
+                  <div class="swiper-slide dimension-grid-slider-slide">                  
+                     <ul>
+                        <li class="dimension-grid-slider-title">XXS</li>
+                        <li>157 - 176 см</li>
+                        <li>86 - 96 см</li>
+                        <li>87 - 95 см</li>
+                     </ul>
+                  </div>
+                  
+               </div>
+            </div>
+      </div>
+
+
+   </div>
+
+   <div class="swiper-container dimension-grid-slider-pag">
+      <div class="swiper-wrapper dimension-grid-slider-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+      </div>
+      <div class="dimension-grid-slider-pagination"></div>
+   </div>
+
+      </div>
+     
+
+   </div>
+
+</div>
+    
+
+    <script src="javascript/script.min.js"></script>
+
+</body>
+</html>
